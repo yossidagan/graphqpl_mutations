@@ -19,7 +19,17 @@ const CustomerType = new GraphQLObjectType({
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
-  customer: CustomerType
+  fields: {
+    customer: CustomerType,
+    args: {
+      id: { type: GraphQLString }
+    },
+    resolve(parent, args) {}
+  },
+  customers: {
+    type: new GraphQLList(CustomerType),
+    resolve(parent, args) {}
+  }
 })
 
 module.exports = new GraphQLSchema({})
