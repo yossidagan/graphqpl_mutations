@@ -1,0 +1,24 @@
+{
+  "name": "graphql_mutations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev:server" : "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yossidagan/graphqpl_mutations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yossidagan/graphqpl_mutations/issues"
+  },
+  "homepage": "https://github.com/yossidagan/graphqpl_mutations#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "nodemon": "^2.0.3"
+  }
+}
