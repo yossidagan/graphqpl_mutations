@@ -7,7 +7,19 @@ const {
   GraphQLNonNull
 } = require('graphql')
 
-
-module.exports = new GraphQLSchema({
-    
+const CustomerType = new GraphQLObjectType({
+  name: 'Customer',
+  fields: () => ({
+    id: { type: GraphQLString },
+    name: { type: GraphQLString },
+    email: { type: GraphQLString },
+    age: { type: GraphQLInt }
+  })
 })
+
+const RootQuery = new GraphQLObjectType({
+  name: 'RootQueryType',
+  customer: CustomerType
+})
+
+module.exports = new GraphQLSchema({})
